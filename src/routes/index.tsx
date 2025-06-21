@@ -5,18 +5,20 @@ import styles from "./index.module.css";
 export default component$(() => {
   return (
     <div class={styles.container}>
-      <h1>Hi 👋</h1>
-      <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </div>
-
+      <h1 class="mb-2 text-3xl font-bold">Welcome to our Web Agency</h1>
+      <p class="mb-4 text-center">
+        We craft fast and modern websites using cutting-edge technology.
+      </p>
       <nav>
-        <ul>
+        <ul class="flex gap-4">
           <li>
-            <Link href="/second" class="cursor-pointer">
-              second page
+            <Link href="/services" class="cursor-pointer text-blue-600 hover:underline">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link href="/second" class="cursor-pointer text-blue-600 hover:underline">
+              About Us
             </Link>
           </li>
         </ul>
@@ -26,11 +28,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Web Agency",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Professional web development services",
     },
   ],
 };
